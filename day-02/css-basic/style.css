@@ -1,0 +1,53 @@
+h2 {
+  background-color: yellow;
+  color: red;
+}
+#heading {
+  color: white;
+  background-color: tomato;
+  text-transform: uppercase;
+}
+.para {
+  font-style: italic;
+  color: gray;
+  font-size: 20px;
+  text-align: justify;
+}
+.text-red {
+  color: red;
+}
+.text-center {
+  text-align: center;
+}
+.text-upercase {
+  text-transform: uppercase;
+}
+.text-big {
+  font-size: 32px;
+}
+/* thể hiện vị trí chính xác hơn */
+.text-big.text-red {
+  color: blue;
+}
+h2.text-big.text-red {
+  color: violet;
+}
+/* thể hiện mối quan hệ cha con */
+.box p {
+  color: #7048e8;
+}
+/* chọn 2 bộ chọn riêng biệt */
+.text-big,
+.text-red {
+  background-color: #a9e34b;
+}
+/* mối quan hệ cha cháu */
+.box span {
+  color: #7950f2;
+}
+.p > span {
+  color: #4dabf7;
+}
+.box p > span {
+  color: #fa5252;
+}
