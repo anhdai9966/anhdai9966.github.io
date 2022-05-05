@@ -1,6 +1,7 @@
-# file riêng biệt
+# không đẩy lên trên github
+# chọn file riêng biệt
 note.txt
-# nhóm file txt
+# chọn nhóm file txt
 **.txt
-# thư mục
+# chọn thư mục
 content1/
