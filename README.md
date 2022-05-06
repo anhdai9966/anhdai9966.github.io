@@ -38,3 +38,29 @@ Nếu muốn tìm hiểu thêm thông tin có thể thao khảo trang web sau:
 
 - https://www.w3schools.com/
 - https://www.w3schools.com/
+
+## Attribute Selector
+
+[attribute]
+chọn tất cả các phần tử có 1 thuộc tính cụ thể
+**Examples**
+`[type]` selects all elements that have a type="anything". attribute
+
+A[attribute]
+Chọn các phần tử có một thuộc tính cụ thể
+**Examples**
+`[value]` selects all elements that have a value="anything" attribute.
+`a[href]` selects all a elements that have a href="anything" attribute.
+`input[disabled]` selects all input elements with the disabled attribute
+
+[attribute="value"]
+Chọn các phần tử có **giá trị** thuộc tính **cụ thể**
+
+[attribute^="value"]
+Chọn các phần tử có thuộc tính **bắt đầu** bằng các ký tự cụ thể
+
+[attribute$="value"]
+Chọn các phần tử có thuộc tính **kết thúc** bằng các ký tự cụ thể
+
+[attribute*="value"]
+Chọn các phần tử có thuộc tính chứa các ký tự cụ thể **ở bất kỳ đâu**
