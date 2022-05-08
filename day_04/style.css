@@ -1,0 +1,85 @@
+/* Clear một số thuộc tính mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #464646;
+}
+
+/* clear những thuộc tính mặc định của các thẻ*/
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+.card {
+  width: 400px;
+  box-shadow: 0 4px 4px rgba(0 0 0/ 15%);
+  background-color: #fff;
+  margin: 100px auto 0;
+}
+
+.year {
+  background-color: #ef5321;
+}
+
+.year p {
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  padding: 6px 0;
+}
+
+.date {
+  background-color: #fd6d3f;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.date h2 {
+  font-weight: 300;
+  font-size: 35px;
+}
+
+.date p {
+  font-weight: 300;
+  padding: 6px 0;
+}
+
+.info {
+  padding: 20px;
+}
+
+.info h2 {
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.info p:nth-child(4) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.info a {
+  font-weight: 300;
+  color: #3c78e8;
+}
