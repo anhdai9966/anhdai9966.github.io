@@ -1,0 +1,54 @@
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: #74c0fc;
+
+  position: relative;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+  /* số càng lớn càng gần khung cửa sổ hiển thị (nằm bên trên các phần tử khác nếu có z-index nhỏ) */
+}
+
+.parent {
+  width: 1000px;
+  height: 500px;
+  background-color: #1c7ed6;
+  margin-top: 50px;
+
+  position: relative;
+  /* dựa trên vị trí của nó để định vị */
+}
+
+.child {
+  width: 300px;
+  height: 100px;
+  background-color: #ffa94d;
+
+  position: absolute;
+  /* Dựa trên vị trí của cha nó (có position: relative | absolute) để định vị (còn không thì nó dựa trên thẻ body) */
+  top: 50px;
+  left: 100px;
+}
+
+.btn-top {
+  padding: 15px 30px;
+  border: none;
+  background-color: #ff8787;
+  color: #fff;
+  border-radius: 4px;
+
+  position: fixed;
+  /* Dựa trên khung cửa sổ trình duyệt để định vị */
+  right: 50px;
+  bottom: 50px;
+}
+
+.sticky {
+  height: 100px;
+  background-color: #845ef7;
+
+  position: sticky;
+  /* Dựa trên cạnh trên, dưới của khung cửa sổ trình duyệt, left, right không hoạt động */
+  top: 50px;
+}

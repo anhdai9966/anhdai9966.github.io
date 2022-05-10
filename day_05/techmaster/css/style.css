@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* style chung */
+@import url(./base.css);
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./card.css);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.text-bold {
+  font-weight: bold;
+}
