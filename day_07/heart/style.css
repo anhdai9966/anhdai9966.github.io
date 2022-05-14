@@ -1,0 +1,141 @@
+body {
+  display: flex;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: #ff6b6b;
+  position: relative;
+}
+
+.heart {
+  color: #fff;
+  font-size: 100px;
+
+  text-align: center;
+  line-height: 500px;
+
+  animation: scale 1s ease-in infinite;
+}
+
+@keyframes scale {
+  0% {
+    font-size: 100px;
+  }
+  50% {
+    font-size: 200px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    font-size: 100px;
+  }
+}
+
+/* .heart:last-child {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: opacity 1s ease-out infinite;
+} */
+
+@keyframes opacity {
+  from {
+    font-size: 100px;
+    opacity: 1;
+  }
+  to {
+    font-size: 300px;
+    opacity: 0;
+  }
+}
+
+/* heart không dùng icon */
+
+.container-2 {
+  width: 500px;
+  height: 500px;
+  margin-left: 20px;
+  background-color: #ff6b6b;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* position: relative; */
+}
+
+.wrapper {
+  width: 180px;
+  height: 180px;
+  /* background-color: #ffc9c9; */
+
+  transform: rotateX(-45deg);
+
+  animation: scale2 1s ease-in infinite;
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-2 {
+  width: 100px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 50px 50px 0 0;
+
+  transform: rotate(-45deg);
+}
+
+.heart-2::before {
+  content: '';
+  width: 100px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 50px 50px 0 0;
+
+  transform: rotate(90deg);
+
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  background-color: #ff6b6b;
+  /* transform: rotate(45deg); */
+}
+
+.box-con {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 25px 25px 0 0;
+}
+
+.box-con::before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 25px 25px 0 0;
+  transform: rotate(180deg);
+
+  position: relative;
+  top: 50px;
+  left: 0;
+}

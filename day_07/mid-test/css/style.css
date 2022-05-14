@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url(./base.css);
+@import url(./header.css);
+
+.row {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.btn-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+}
+
+.btn-top:hover > .btn-icon {
+  animation: gotop 0.5s;
+}
+
+@keyframes gotop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
