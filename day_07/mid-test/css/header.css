@@ -24,18 +24,14 @@
 }
 .header-top > ul > li > a:hover {
   color: var(--primary-color);
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .header-top .social {
   font-size: 0.85em;
 }
 
-.hr {
-  border-top: 0.1px solid #464646;
-}
-
-/* main */
+/* header main */
 .header-main {
   height: 90px;
 
@@ -45,7 +41,7 @@
 }
 
 .header-main .logo {
-  max-width: 200px;
+  width: 200px;
 }
 
 .header-main > .search {
@@ -62,6 +58,7 @@
   font-size: 13px;
 }
 
+.header-main > .search > .txb-search:hover,
 .header-main > .search > .txb-search:focus {
   transition: all 0.2s;
   box-shadow: 0 0 6px 3px rgba(225, 225, 225, 0.3);
@@ -108,6 +105,7 @@
   top: -6px;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 0.3s;
 }
 
 .header-main > .cart-wrapper > .cart .cart-count {
@@ -126,7 +124,6 @@
 }
 
 .header-main > .cart-wrapper > .cart:hover .cart-animation {
-  transition: all 0.3s ease-out;
   top: -10px;
 }
 
@@ -146,13 +143,13 @@
   position: absolute;
   top: 40px;
   right: 0;
-  z-index: 9;
-  transform: scaleY(0);
+  z-index: 90;
+  transform: translate(50%, -50%) scale(0);
 }
 
 .header-main > .cart-wrapper > .cart:hover .cart-list {
-  transition: all 0.3s;
-  transform: scaleY(1);
+  transition: all 0.25s ease-out;
+  transform: translate(0, 0) scale(1);
 }
 
 .header-main > .cart-wrapper > .cart .cart-list::before {
@@ -169,6 +166,16 @@
   transform: rotate(45deg);
 }
 
+.header-main > .cart-wrapper > .cart .cart-list::after {
+  content: '';
+  background-color: transparent;
+  position: absolute;
+  top: -11px;
+  right: 0px;
+  width: 30px;
+  height: 14px;
+}
+
 /* nav */
 .navigation {
   width: 100%;
@@ -183,6 +190,12 @@
 
   position: sticky;
   top: 0;
+  z-index: 50;
+}
+
+.navigation > ul {
+  white-space: nowrap;
+  /* overflow-x: auto; */
 }
 
 .navigation > ul > li {
@@ -190,11 +203,11 @@
   margin: 0 30px;
 
   position: relative;
+  transition: all 0.3s;
 }
 
 .active,
 .navigation > ul > li:hover {
-  transition: color 0.3s;
   color: var(--primary-color);
 }
 
@@ -222,8 +235,4 @@
 
 .navigation > ul > li > a {
   text-transform: uppercase;
-}
-
-main {
-  height: 1000px;
 }
