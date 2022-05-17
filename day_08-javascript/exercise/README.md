@@ -241,21 +241,22 @@ Math.pow(3, 4); // 3^4 or 3**4
 Math.sqrt(25); // 5
 ```
 
+---
 ## Một số lưu ý cần biết khi dùng với các phép toán `+, -, *, /,`
 
-TH1: _string_ là các ký tự, _number_ là các số
-string + string = string
-string + number = string (vị trí ngược lại tương tự)
-string - string = NaN (tương tự `*, /`)
-string - number = NaN (tương tự `*, /`) (vị trí ngược lại tương tự)
-undefined + string = string
+TH1: _string_ là các ký tự, _number_ là các số\
+string + string = string\
+string + number = string (vị trí ngược lại tương tự)\
+string - string = NaN (tương tự `*, /`)\
+string - number = NaN (tương tự `*, /`) (vị trí ngược lại tương tự)\
+undefined + string = string\
 undefined + number = NaN (tương tự `-, *, /`)
 
-TH2: _string_ là số, _number_ là số
-string + string = string
-string + number = string (vị trí ngược lại tương tự)
-string - string = number (tương tự `*, /`)
-string - number = number (tương tự `*, /`) (vị trí ngược lại tương tự)
+TH2: _string_ là số, _number_ là số\
+string + string = string\
+string + number = string (vị trí ngược lại tương tự)\
+string - string = number (tương tự `*, /`)\
+string - number = number (tương tự `*, /`) (vị trí ngược lại tương tự)\
 
 Với: phép chia cho 0 = infinity, Null = 0, typeof(value) = string
 
