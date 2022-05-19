@@ -1,0 +1,147 @@
+@import url(./base.css);
+
+/* header */
+.header {
+  color: #999;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+}
+
+.header-wrapper {
+  height: 70px;
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+.header-wrapper img {
+  max-width: 64px;
+}
+
+.header-wrapper ul {
+  font-weight: 700;
+}
+
+.header-wrapper ul li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.header-wrapper ul li:hover {
+  color: #4d4d4d;
+}
+
+/* content */
+.top-container {
+  width: 100%;
+  color: #312933;
+  background-color: #ffd741;
+}
+
+.content-top {
+  width: calc((100% - 1140px) / 2 + 1140px);
+  height: 600px;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content-top .text {
+  padding: 40px;
+  flex-basis: 50%;
+}
+
+.content-top .text h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.content-top .text h1 {
+  font-size: 3rem;
+}
+
+.content-top .text p {
+  margin-top: 24px;
+}
+
+.content-top .text a:hover {
+  color: #f5f5f5;
+  background-color: #312933;
+}
+
+.content-top .image {
+  flex-basis: 50%;
+  height: 100%;
+  background-image: url(./imgs/image-top.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* list */
+.lists-container {
+  width: 100%;
+}
+
+.lists-container .title {
+  width: 100%;
+  text-align: center;
+}
+.lists-container .title h2 {
+  margin: 60px 0 0;
+  font-size: 3rem;
+}
+.lists-container .title p {
+  margin: 17px 0 0;
+}
+
+.lists-container .lists {
+  margin: 20px 0 60px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.lists-container .list-item {
+  padding: 40px 0;
+  text-align: center;
+
+  position: relative;
+}
+
+.lists-container .list-item h2 {
+  font-size: 16rem;
+  font-weight: 900;
+  color: #f9e79b;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.lists-container .list-item h3 {
+  margin: 40px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.lists-container .list-item p {
+  margin: 40px;
+  line-height: 27px;
+}

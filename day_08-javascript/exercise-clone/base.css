@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  color: #111;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.upper-text {
+  text-transform: uppercase;
+}
+
+.under-text {
+  width: 100%;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #312933;
+}
