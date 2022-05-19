@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +12,7 @@ body {
   width: 100%;
   color: #111;
   background-color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -25,17 +29,21 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
 .row {
   max-width: 1140px;
   margin: 0 auto;
-}
-
-.upper-text {
-  text-transform: uppercase;
-}
-
-.under-text {
-  width: 100%;
-  padding-bottom: 1px;
-  border-bottom: 1px solid #312933;
 }
