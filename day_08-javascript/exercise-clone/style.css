@@ -59,8 +59,6 @@
   flex-basis: 40%;
   padding: 80px 0 10px 50px;
   color: #312933;
-  position: relative;
-  z-index: 5;
 }
 
 .banner .text-wrap h2 {
@@ -101,8 +99,6 @@
 
 .banner-top .banner .image {
   background-image: url(./imgs/image-banner-1.jpg);
-  /* transition: transform 2s 1s;
-  transform: scale(1.05) translateY(-5px); */
   animation: scale 1s 0.3s ease-out forwards;
   transform: scale(0.98) translateY(40px);
   opacity: 0;
