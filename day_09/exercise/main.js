@@ -95,7 +95,11 @@ console.log(getNumber(15));
 // Bài 2
 function equation(a, b) {
   if (a == 0) {
-    console.log('Phương trình vô nghiệm');
+    if (b == 0) {
+      console.log('Phương trình có vô số nghiệm');
+    } else {
+      console.log('Phương trình vô nghiệm');
+    }
   } else {
     let x = -b / a;
     console.log(`Phương trình có nghiệm x = ${x}`);
@@ -106,9 +110,13 @@ console.log(equation(4, -8));
 
 // Bài 3
 function quadratic(a, b, c) {
-  if (a == 0 && b == 0) {
-    console.log('Phương trình vô nghiệm');
-  } else if (a == 0) {
+  if (a == 0) {
+    if (b == 0) {
+      if (c == 0) {
+        console.log('Phương trình có vô số nghiệm');
+      }
+      console.log('Phương trình vô nghiệm');
+    }
     let x = -c / b;
     console.log(`Phương trình có 1 nghiệm x = ${x}`);
   } else {
@@ -144,7 +152,7 @@ console.log(checkYear(2022));
 
 // Bài 5
 function checkBMI(weight, height) {
-  let bmi = weight / (height * 2);
+  let bmi = weight / height ** 2;
   return bmi;
 }
 
