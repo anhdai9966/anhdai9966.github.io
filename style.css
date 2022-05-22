@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: solid;
+}
+
+html {
+  font-family: fantasy;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+h1 {
+  text-align: center;
+  color: #fa5252;
+}
