@@ -22,12 +22,41 @@ a:hover {
 }
 
 html {
-  font-family: fantasy;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 100%;
-  font-weight: normal;
 }
 
-h1 {
-  text-align: center;
-  color: #fa5252;
+body {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.title {
+  width: fit-content;
+  padding: 5px 18px;
+  margin: 50px auto;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: #fff;
+  background-color: #9775fa;
+  border: 3px dashed #7048e8;
+}
+
+.sub-title {
+  width: fit-content;
+  padding: 5px 18px;
+  color: #f03e3e;
+  background-color: #ffe3e3;
+  border: 2px dashed #f03e3e;
+  border-radius: 5px;
+}
+
+.para {
+  width: fit-content;
+  margin-top: 50px;
+  padding: 5px 18px;
+  color: #37b24d;
+  background-color: #d3f9d8;
+  border: 2px dashed #37b24d;
+  border-radius: 5px;
 }
