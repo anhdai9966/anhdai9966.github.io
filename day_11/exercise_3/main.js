@@ -4,12 +4,27 @@ function checkStringExist(str, subStr) {
   return str.includes(subStr);
 }
 
+function checkStringExist1(str, subStr) {
+  if (str.indexOf(subStr) == -1) {
+    return false;
+  }
+
+  return true;
+
+  // return str.indexOf(subStr) == -1
+}
+
 console.log(checkStringExist('Javascript is Awesome', 'is'));
+console.log(checkStringExist1('Javascript is Awesome', 'is'));
 
 // Bài 2. Viết function truyền vào 1 chuỗi, hãy rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. Nếu chuỗi có độ dài <= 8 ký tự thì giữ nguyên
 
 function shortenString(str) {
-  return str.substring(0, 8) + '...';
+  if (str.length <= 8) {
+    return str.substring(0, 8) + '...';
+  }
+
+  return str;
 }
 
 console.log(shortenString('Xin chào các bạn'));
@@ -21,6 +36,7 @@ function checkStrDX(str) {
 
   for (let i = 0; i < str.length / 2 - 1; i++) {
     let char = string.substring(i, i + 1);
+
     if (!string.endsWith(char, str.length - i)) {
       return false;
     }
@@ -36,18 +52,22 @@ console.log(checkStrDX('hello world'));
 
 function sortOneNumber(num) {
   let strNum = num.toString().split('').sort(), // convert to string
-    temp = '';
+    temp = '',
+    i = 0;
 
-  if (strNum[0] == `0`) {
-    temp = strNum[1];
-    strNum[1] = strNum[0];
+  while (strNum[0] == `0`) {
+    i++;
+    temp = strNum[i];
+    strNum[i] = strNum[0];
     strNum[0] = temp;
   }
 
-  return strNum.join('');
+  return Number(strNum.join(''));
 }
 
-console.log(sortOneNumber(7019));
+// đảo ngược mảng reverse()
+
+console.log(sortOneNumber(-700019));
 
 // Bài 5: Viết function truyền vào 1 chuỗi bất kỳ gồm nhiều từ. Hãy chuyển chuỗi đó thành dạng snake_case và viết thường
 
