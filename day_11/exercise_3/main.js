@@ -51,23 +51,32 @@ console.log(checkStrDX('hello world'));
 // Bài 4: Viết function truyền vào 1 số nguyên, hãy sắp xếp lại các chữ số trong số nguyên đó sao cho ra 1 số nhỏ nhất có thể (không tính số 0 đầu tiên).
 
 function sortOneNumber(num) {
-  let strNum = num.toString().split('').sort(), // convert to string
+  let strNum = num.toString().split(''),
     temp = '',
     i = 0;
+  nevagite = 1;
 
-  while (strNum[0] == `0`) {
-    i++;
-    temp = strNum[i];
-    strNum[i] = strNum[0];
-    strNum[0] = temp;
+  if (strNum[0] == '-') {
+    strNum.shift();
+    nevagite = -1;
   }
 
-  return Number(strNum.join(''));
+  for (let i = 0; i < strNum.length - 1; i++) {
+    for (let j = 0; j < strNum.length; j++) {
+      if (strNum[i] < strNum[j]) {
+        temp = strNum[i];
+        strNum[i] = strNum[j];
+        strNum[j] = temp;
+      }
+    }
+  }
+
+  return Number(strNum.join('')) * nevagite;
 }
 
 // đảo ngược mảng reverse()
 
-console.log(sortOneNumber(-700019));
+console.log(sortOneNumber(21341258));
 
 // Bài 5: Viết function truyền vào 1 chuỗi bất kỳ gồm nhiều từ. Hãy chuyển chuỗi đó thành dạng snake_case và viết thường
 

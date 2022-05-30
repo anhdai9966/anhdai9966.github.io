@@ -6,7 +6,7 @@ function maxArr(arr) {
   let max = arr[0];
 
   for (let i = 0; i < arr.length; i++) {
-    if (isNaN(arr[i]) || arr[i] == null) {
+    if (typeof arr[i] !== 'number') {
       return 'Mảng là các số, không được bỏ trống, hãy kiểm tra lại';
     }
 
@@ -26,7 +26,7 @@ function minArr(arr) {
   let min = arr[0];
 
   for (let i = 0; i < arr.length; i++) {
-    if (isNaN(arr[i]) || arr[i] == null) {
+    if (typeof arr[i] !== 'number') {
       return 'Mảng là các số, không được bỏ trống, hãy kiểm tra lại';
     }
 

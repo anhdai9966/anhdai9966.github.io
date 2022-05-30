@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-h1 {
-  text-transform: uppercase;
-  font-family: Oswald, sans-serif;
-  font-weight: 700;
+@import url(./base.css);
+
+/* Header----------------------------------- */
+.header {
+  width: 1140px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
 }
