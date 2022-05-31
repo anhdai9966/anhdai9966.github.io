@@ -110,3 +110,5 @@ console.log(checkArr2(myArr2));
 
 let myArr3 = [2, 3, 6, 8, 10];
 console.log(checkArr2(myArr3));
+
+let ar = new Array(5);

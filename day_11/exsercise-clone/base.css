@@ -6,9 +6,9 @@
 
 body {
   width: 100%;
-  color: #111;
+  color: #333;
   background-color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -21,6 +21,7 @@ img {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
@@ -31,9 +32,10 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: uppercase;
   font-family: Oswald, sans-serif;
+  text-transform: uppercase;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 form,
