@@ -2,16 +2,17 @@
 
 // sortStudents([‘Nam’, ‘Hoa’, ‘Tuấn’]) => [‘Tuấn’, ‘Nam’, ‘Hoa’]
 
-let sortStudents = function (arr) {
-  arr.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-    return 0;
-  });
-  return arr;
+let sortStudents = function (arr = []) {
+  // arr.sort((a, b) => {
+  //   if (a > b) return -1;
+  //   if (a < b) return 1;
+  //   return 0;
+  // });
+  // return arr;
+  return arr.sort((a, b) => b.localeCompare(a, 'vi', { sensitivity: 'base' }));
 };
 
-console.log(sortStudents(['Nam', 'Hoa', 'Tuấn']));
+console.log(sortStudents(['Nam', 'Hoa', 'Tuấn', 'Dương', 'Đài']));
 
 // Bài 2: Viết function đổi chỗ ngẫu nhiên vị trí của các phần tử trong mảng
 
@@ -19,20 +20,22 @@ console.log(sortStudents(['Nam', 'Hoa', 'Tuấn']));
 // shuffle([1,2,3,4,5]) => [4,2,3,5,1]
 
 let shuffle = function (arr) {
-  let subArr = [];
+  // let subArr = [];
 
-  arr.forEach((e) => {
-    while (true) {
-      let rdNum = Math.floor(Math.random() * arr.length * 10);
+  // arr.forEach((e) => {
+  //   while (true) {
+  //     let rdNum = Math.floor(Math.random() * arr.length);
 
-      if (subArr[rdNum] == null) {
-        subArr[rdNum] = e;
-        break;
-      }
-    }
-  });
+  //     if (subArr[rdNum] == null) {
+  //       subArr[rdNum] = e;
+  //       break;
+  //     }
+  //   }
+  // });
 
-  return subArr.flat();
+  // return subArr;
+  // Cách khác nhanh hơn
+  return arr.sort(() => 0.5 - Math.random());
 };
 
 console.log(shuffle([1, 2, 3, 4, 5]));
@@ -73,7 +76,11 @@ function getE(arr) {
 }
 
 let union = function (arr1 = [], arr2 = []) {
-  return getE(getE(arr1).concat(getE(arr2)));
+  // return getE(getE(arr1).concat(getE(arr2)));
+
+  // nên nối 2 mảng lại rồi chạy
+  let newArr = [...arr1, ...arr2];
+  return getE(newArr);
 };
 
 console.log(union([1, 2, 3, 1], [4, 3, 2, 4]));
