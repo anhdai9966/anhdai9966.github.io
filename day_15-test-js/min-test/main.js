@@ -116,7 +116,14 @@ const getTime = (str = [], num) => {
   // xác định điều kiện đề bài
   if (num < 1000) {
     // tính tổng số giây
-    sumSecond = arr[0] * 3600 + arr[1] * 60 + arr[2] + num;
+    let i = 2; // vì mảng này chỉ có 3 phần tử
+    // chỗ này là về nhà em sửa lại
+    // tính tổng giờ phút giây
+    arr.forEach((ele) => {
+      sumSecond += ele * Math.pow(60, i);
+      i--;
+    });
+    sumSecond += num;
   }
 
   // tạo lại số giờ phút giây từ tổng số giây
@@ -202,22 +209,18 @@ const getCountElement = (arr = []) => {
 
   // tạo các biến phụ
   let result = [];
-  let j = 0;
-  let count = 1; // đặt biến đếm ban đầu =1
 
   // duyệt các phần tử trong mảng subArr
   subArr.forEach((ele) => {
     // so sánh nó với mảng arr rồi đếm số lần xuất hiện nếu nó đúng
-    for (let i = 0; i < arr.length; i++) {
-      // phần này em chưa làm được
-      if (arr.includes(ele, j)) {
-        count++;
-        j += arr.indexOf(ele) + 1;
-      } else {
-        j = 0;
-        count = 1;
-        break;
-      }
+    // tìm vị trí đầu tiên xuất hiện
+    let index = arr.indexOf(ele);
+    let count = 0; // đặt biến đếm ban đầu =0
+    // chỗ này thì về nhà em sửa lại
+    // lặp lại đến hết mảng thì dừng và nếu đúng thì count + 1
+    while (index !== -1) {
+      count++;
+      index = arr.indexOf(ele, index + 1);
     }
 
     // tạo một obj rồi thêm vào một mảng
