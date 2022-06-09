@@ -7,7 +7,7 @@ text.innerText = 'Javascrip is awesome';
 text.setAttribute('id', 'text');
 text.style.color = '#777';
 
-document.body.appendChild(text);
+document.body.prepend(text);
 
 // Đặt kích thước phông chữ thành 2rem
 text.style.fontSize = '2rem';
@@ -25,14 +25,11 @@ text.innerHTML =
 //     <li>Item 3</li>
 // </ul>
 
-const ul = document.createElement('ul');
-document.body.appendChild(ul);
+const ulTag = document.querySelector('ul');
 
 for (let i = 1; i <= 3; i++) {
-  const li = document.createElement('li');
-  li.innerText = `Item ${i}`;
-  li.style.color = 'blue';
-  ul.insertAdjacentElement('beforeend', li);
+  const liTag = ulTag.querySelector(`li:nth-child(${i})`);
+  liTag.style.color = 'green';
 }
 
 // Câu 3. Cho mã HTML có nội dung như sau (tạo thẻ ul-li bằng html):
@@ -54,33 +51,33 @@ for (let i = 1; i <= 3; i++) {
 const list = document.querySelector('#list');
 
 for (let i = 8; i <= 10; i++) {
-  const li = document.createElement('li');
-  li.innerText = `Item ${i}`;
-  list.insertAdjacentElement('beforeend', li);
+  const liTag = document.createElement('li');
+  liTag.innerText = `Item ${i}`;
+  list.insertAdjacentElement('beforeend', liTag);
 }
 
 // Sửa nội dung cho thẻ <li> 1 thành màu đỏ (color)
 
-const li1 = list.firstElementChild;
+const liTag1 = list.firstElementChild;
 
-li1.style.color = 'red';
+liTag1.style.color = 'red';
 
 // Sửa background cho thẻ <li> 3 thành màu xanh (background-color)
 
-const li3 = list.querySelector('li:nth-child(3)');
+const liTag3 = list.querySelector('li:nth-child(3)');
 
-li3.style.backgroundColor = 'blue';
+liTag3.style.backgroundColor = 'blue';
 
 // Remove thẻ <li> 4
 
-const li4 = list.querySelector('li:nth-child(4)');
+const liTag4 = list.querySelector('li:nth-child(4)');
 
-list.removeChild(li4);
+list.removeChild(liTag4);
 
 // Thêm thẻ <li> mới thay thế cho thẻ <li> 4 bị xóa ở bước trước, thẻ <li> mới có nội dung bất kỳ
 
-const liCopy = li4.cloneNode(true);
+const liCopy = liTag4.cloneNode(true);
 
 liCopy.innerText = 'New item';
 
-li3.insertAdjacentElement('afterend', liCopy);
+liTag3.insertAdjacentElement('afterend', liCopy);
