@@ -70,7 +70,7 @@ const getRandomElement = (arr) => {
   return arr[rdnum];
 };
 
-console.log(getRandomElement([3, 7, 9, 11])); // kiểm tra những phần tử không xác định
+console.log(getRandomElement([3, 7, 9, 11]));
 
 // Bài 4 (1 điểm). Viết function truyền vào 2 mảng số bất kỳ. Lấy ra một mảng chứa các phần tử xuất hiện trong cả hai mảng đó
 
@@ -235,3 +235,25 @@ const getCountElement = (arr = []) => {
 };
 
 console.log(getCountElement(['one', 'two', 'three', 'one', 'one', 'three']));
+
+// cách thứ 2
+const getCountElement2 = (arr = []) => {
+  let subArr = [];
+  let result = [];
+
+  arr.forEach((ele) => {
+    if (!subArr.includes(ele)) {
+      subArr.push(ele);
+
+      let count = arr.filter((item) => item == ele).length;
+
+      let obj = {};
+      obj.name = ele;
+      obj.count = count;
+      result.push(obj);
+    }
+  });
+  return result;
+};
+
+console.log(getCountElement2(['one', 'two', 'three', 'one', 'one', 'three']));
