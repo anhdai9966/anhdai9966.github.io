@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+    <style>
+        .text-red {
+            color: red;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .text-big {
+            font-size: 40px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-red" id="heading">Truy cập phần tử DOM</h1>
+
+    <h1 class="time">10s</h1>
+    <h2 class="message hide">Hết giờ</h2>
+
+    <script>
+        const heading = document.querySelector('#heading');
+
+        // xem danh sách phần tử
+        console.log(heading.classList);
+
+        // thêm class
+        heading.classList.add('text-big', 'text-center');
+
+        // xóa class
+        heading.classList.remove('text-center');
+
+        // kiểm tra 1 class có tồn tại không? true / false
+        console.log(heading.classList.contains('text-big'));
+        console.log(heading.classList.contains('text-center'));
+
+        // toggle. nếu có class thì xóa đi, nếu không thì thêm vào
+
+        // lặp đi lặp lại một công việc sau 1 khoảng thời gian nhất định
+        // para 1: fn
+        // para 2: time (ms)
+        // setInterval(() => {
+        //     heading.classList.toggle('text-red');
+        // }, 1000)
+
+        // delay 1 khoảng thời gian sau mới thực hiện 1 lần
+        // setTimeout(() => {
+        //     heading.classList.toggle('text-red');
+        // }, 3000)
+
+        // thực hiện đếm ngược thời gian 10s về 0 kết thúc thì hiển thị ra một message
+        let time = 10;
+        let interval = setInterval(() => {
+            time--;
+            document.querySelector('.time').innerText = `${time}s`;
+            if (time == 0) {
+                // dừng quá trình lặp lại
+                clearInterval(interval);
+
+                document.querySelector('.message').classList.remove('hide');
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>
