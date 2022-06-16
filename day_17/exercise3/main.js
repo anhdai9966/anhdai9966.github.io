@@ -8,11 +8,7 @@ const nextBtn = document.querySelector(".nextBtn");
 nextBtn.addEventListener("click", () => {
   count++;
   counter.innerText = count;
-  if (count > 0) {
-    counter.style.color = "green";
-  } else if (count == 0) {
-    counter.style.color = "#333333";
-  }
+  changeColor();
 });
 
 // Bấm vào Trừ giảm counter đi 1
@@ -20,13 +16,19 @@ const prevBtn = document.querySelector(".prevBtn");
 prevBtn.addEventListener("click", () => {
   count--;
   counter.innerText = count;
-  if (count < 0) {
-    counter.style.color = "red";
-  } else if (count == 0) {
-    counter.style.color = "#333333";
-  }
+  changeColor();
 });
 
 // Nếu counter > 0 có màu green
 // Nếu counter = 0 có màu #333333
 // Nếu counter < 0 có màu red
+
+const changeColor = () => {
+  if (count < 0) {
+    counter.style.color = "red";
+  } else if (count > 0) {
+    counter.style.color = "green";
+  } else {
+    counter.style.color = "#333333";
+  }
+};

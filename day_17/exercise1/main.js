@@ -20,12 +20,13 @@ const password = document.querySelector("#password");
 const btnLogin = document.querySelector("#btn-login");
 
 const checkUsers = () => {
-  if (username.value == "" || password.value == "") {
+  if (!username.value || !password.value) {
     alert("Bạn phải điền thông tin vào");
   } else {
     if (
       users.some(
-        (e) => e.username == username.value && e.password == password.value
+        (user) =>
+          user.username == username.value && user.password == password.value
       )
     ) {
       alert("Đăng nhập thành công");

@@ -6,7 +6,7 @@ const p = document.querySelector("p");
 let arrPara = p.innerText.split(/([!,?,., ])/);
 
 // xóa khoảng trắng trong mảng
-arrParaRemoveSpace = arrPara.filter((ele) => ele !== " " && ele !== "");
+const arrParaRemoveSpace = arrPara.filter((ele) => ele !== " " && ele !== "");
 
 // thêm highlight vào những phần tử có độ dài >= 8
 const highlineLongWord = arrParaRemoveSpace.map((word) =>
@@ -16,7 +16,7 @@ const highlineLongWord = arrParaRemoveSpace.map((word) =>
 // ghép các phần tử trong mảng thành một giá trị duy nhất với những ký tự dấu thì không thêm khoảng cách
 let para = "";
 highlineLongWord.forEach((ele) => {
-  if (ele.search(/[!,?,.+]/) == -1) {
+  if (ele.search(/[!,?,.]/) == -1) {
     para += " " + ele;
   } else {
     para += ele;
