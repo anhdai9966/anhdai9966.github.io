@@ -114,19 +114,11 @@ const discountFormInput = document.querySelector("#discount-form-input");
 const btnApply = document.querySelector("#btn-apply");
 
 let money;
-const calcMoney = () => {
-  money = 0;
-  items.forEach((item) => {
-    money += item.price * item.count;
-  });
-  subTotalMoney.innerText = formatMoney(money);
-  totalMoney.innerText = formatMoney(money);
-};
-
-calcMoney();
+let discount = 0;
 
 btnApply.addEventListener("click", () => {
-  let discount = 0;
+  // nếu không nhập mã không đúng thì giảm giá bằng 0
+  discount = 0;
   if (money == 0) {
     alert("Hãy chọn sản phẩm để được áp dụng mã giảm giá");
     return;
@@ -134,13 +126,26 @@ btnApply.addEventListener("click", () => {
   switch (discountFormInput.value) {
     case "10PER":
       discount = money * 0.1;
+      alert("Bạn được giảm 10% vào giá mua");
       break;
     case "20PER":
       discount = money * 0.2;
+      alert("Bạn được giảm 20% vào giá mua");
       break;
   }
   discountFormInput.value = "";
   totalMoney.innerText = formatMoney(money - discount);
 });
+
+const calcMoney = () => {
+  money = 0;
+  items.forEach((item) => {
+    money += item.price * item.count;
+  });
+  subTotalMoney.innerText = formatMoney(money);
+  totalMoney.innerText = formatMoney(money - discount);
+};
+
+calcMoney();
 
 rederProduct(items);
