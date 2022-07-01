@@ -1,0 +1,75 @@
+{
+  "navigators": [
+    {
+      "id": 1,
+      "name": "Page 1",
+      "status": false
+    },
+    {
+      "id": 2,
+      "name": "Page 2",
+      "status": false
+    },
+    {
+      "id": 3,
+      "name": "Page 3",
+      "status": false
+    },
+    {
+      "id": 4,
+      "name": "Page 4",
+      "status": false
+    },
+    {
+      "id": 5,
+      "name": "Page 5",
+      "status": true
+    },
+    {
+      "id": 6,
+      "name": "Page 6",
+      "status": false
+    },
+    {
+      "id": 7,
+      "name": "Page 7",
+      "status": false
+    },
+    {
+      "id": 8,
+      "name": "Page 8",
+      "status": false
+    },
+    {
+      "id": 9,
+      "name": "Page 9",
+      "status": false
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "name": "Post 1 Headline",
+      "category": "Category",
+      "image": "https://images03.nicepage.com/c461c07a441a5d220e8feb1a/de0499b4ccf0592f89b7ae3c/cosmetologist-applying-mask-face-client-beauty-salon_1303-16759.jpg",
+      "description": "Sample small text. Lorem ipsum dolor sit amet.",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "name": "Post 1 Headline",
+      "category": "Category",
+      "image": "https://images03.nicepage.com/c461c07a441a5d220e8feb1a/8bc03df774895ee8a8d3657c/dermatologist-performing-laser-hair-removal-patient_107420-65633.jpg",
+      "description": "Sample small text. Lorem ipsum dolor sit amet.",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "name": "Post 1 Headline",
+      "category": "Category",
+      "image": "https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9d3cbaca71145da89b72d621/cosmetologist-applying-mask-face-client-beauty-salon_1303-16788.jpg",
+      "description": "Sample small text. Lorem ipsum dolor sit amet.",
+      "link": "#"
+    }
+  ]
+}
