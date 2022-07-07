@@ -13,6 +13,8 @@ a {
 body {
   /* font-family: "Open Sans", sans-serif; */
   font-family: "Work Sans", sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 p {
   color: #a1a4ac;
@@ -57,14 +59,23 @@ button {
 /* header */
 header {
   position: relative;
-  /* margin-bottom: 250px; */
   color: #fff;
 }
 .header-bg {
+  width: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -10;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.header-bg img {
+  width: 100%;
 }
 .header-top .navigation {
   font-size: 14px;
@@ -103,10 +114,15 @@ header {
   line-height: 19px;
 }
 
+.service .image {
+  /* width: fit-content; */
+  height: 120px;
+}
+
 /* screen app */
 .screenApp {
   position: relative;
-  margin: 200px 0;
+  /* margin: 200px 0; */
 }
 .screenApp .bc {
   position: absolute;
@@ -149,6 +165,10 @@ header {
 }
 
 /* card */
+.cards-bg1,
+.cards-bg2 {
+  width: 70px;
+}
 .cards-bg1 {
   top: -10px;
   left: 0;
@@ -271,6 +291,20 @@ footer .bc {
   .service p {
     font-size: 12px;
   }
+  .cards-bg1,
+  .cards-bg2 {
+    width: 25px;
+  }
+  .screenApp .card {
+    margin: 20px auto;
+  }
+  .footer-main,
+  .footer-botton {
+    color: #111;
+  }
+  .footer-item li:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -284,6 +318,20 @@ footer .bc {
   .footer-main h4 {
     font-size: 15px;
   }
+  .cards-bg1,
+  .cards-bg2 {
+    width: 30px;
+  }
+  .screenApp .card {
+    margin: 30px auto;
+  }
+  .footer-main,
+  .footer-botton {
+    color: #111;
+  }
+  .footer-item li:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -296,6 +344,20 @@ footer .bc {
   }
   .footer-main h4 {
     font-size: 18px;
+  }
+  .cards-bg1,
+  .cards-bg2 {
+    width: 50px;
+  }
+  .screenApp .card {
+    margin: 40px auto;
+  }
+  .footer-main,
+  .footer-botton {
+    color: #fff;
+  }
+  .footer-item li:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
