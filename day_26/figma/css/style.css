@@ -1,44 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body,
-body,
-button,
-input,
-select {
+/* add reboot bootstrap*/
+body {
   font-family: "Lato", sans-serif;
 }
-
-img {
-  max-width: 100%;
-}
-
-ul,
-ol {
-  list-style-type: none;
-}
-
 a {
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+}
+a,
+input,
+button {
+  display: block;
+}
 
-a:link,
-a:visited,
-a:hover,
-a:active {
+a,
+button,
+input,
+input:focus,
+input::placeholder {
   color: inherit;
 }
-
-button,
-a {
-  cursor: pointer;
+input {
+  outline: none;
 }
 
+/* add bootstrap */
+.fs-5dot5 {
+  font-size: 1.125rem !important;
+  /* line-height: calc(1.25rem + 0.15vw) !important; */
+}
+/* Nếu màn hình có chiều rộng > 1200px, set the font-size to 80px */
+@media (min-width: 992) {
+  .fs-5-responsive {
+    font-size: 1.25rem !important;
+  }
+}
+/* Nếu màn hình có chiều rộng > 1200px, set the font-size to 30px */
+@media (max-width: 991.98px) {
+  .fs-5-responsive {
+    font-size: 1rem !important;
+  }
+}
+
+/* mine */
+.w-1600 {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+.w-1200 {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  background-image: url("../imgs/Bitmap 1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+button {
+  background: linear-gradient(90deg, #fe985b 2.77%, #fe4fa7 100%);
+  white-space: nowrap;
+}
+.header-main {
+  padding: 250px 0;
+}
+.header-main h1 {
+  font-size: 55px !important;
+}
+.h-53 {
+  height: 53px;
+}
+input {
+  padding-left: 20px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+input:hover {
+  --bs-bg-opacity: 0.5;
+}
+input:focus {
+  --bs-bg-opacity: 0.25;
+}
+
+/* service */
 .service-container {
   padding: 86px 0 132px;
   border-top: 1px solid #e2e2e2;
@@ -61,10 +115,10 @@ a {
   border-bottom: 2px solid #979797;
 }
 
-.testimonals .image {
-  /* max-width: 400px; */
-  /* height: 650px; */
-}
+/* .testimonals .image {
+  max-width: 400px;
+  height: 650px;
+} */
 
 .testimonals .text {
   font-size: 24px;
