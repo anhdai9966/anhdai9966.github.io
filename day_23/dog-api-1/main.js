@@ -98,3 +98,43 @@ btnFetch.addEventListener("click", async () => {
     console.log(err);
   }
 });
+
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Key": "0e0185d095msh8703ca88257ca0fp13814ejsne770d54b18b4",
+//     "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
+//   },
+// };
+
+// fetch("https://movies-app1.p.rapidapi.com/api/movies", options)
+//   .then((response) => response.json())
+//   .then((response) => console.log(response.results))
+//   .catch((err) => console.error(err));
+
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Key": "0e0185d095msh8703ca88257ca0fp13814ejsne770d54b18b4",
+//     "X-RapidAPI-Host": "movie-details1.p.rapidapi.com",
+//   },
+// };
+
+// fetch(
+//   "https://movie-details1.p.rapidapi.com/imdb_api/movie?id=tt1375666",
+//   options
+// )
+//   .then((response) => response.json())
+//   .then((response) => console.log(response))
+//   .catch((err) => console.error(err));
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Key": "0e0185d095msh8703ca88257ca0fp13814ejsne770d54b18b4",
+//     "X-RapidAPI-Host": "movie-details1.p.rapidapi.com",
+//   },
+// };
+// fetch("https://www.googleapis.com/youtube/v3",options)
+// .then(response => response.json())
+// .then(res=>console.log(res))
+// .catch(err => console.log(err))

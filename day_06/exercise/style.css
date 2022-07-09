@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;900&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 a {
@@ -62,7 +62,7 @@ a {
 }
 
 .image::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -77,7 +77,7 @@ a {
   width: 60px;
   height: 60px;
   color: #fff;
-  background-color: #fa5252;
+  background-color: #51cf66;
   border-radius: 50%;
   font-size: 13px;
   font-weight: bold;
@@ -109,7 +109,7 @@ a {
 .content .sub {
   padding: 7px 12px;
   color: #fff;
-  background-color: #fa5252;
+  background-color: #51cf66;
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
@@ -124,7 +124,7 @@ a {
 }
 
 .title p {
-  color: #fa5252;
+  color: #51cf66;
   font-size: 18px;
 }
 
