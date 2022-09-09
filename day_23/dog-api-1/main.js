@@ -60,32 +60,32 @@ Test API như thế nào
 
 // axios
 const imageEl = document.querySelector("#image");
-const btn = document.querySelector("#btn-axios");
-btn.addEventListener("click", async () => {
-  try {
-    // gọi API -> https://dog.ceo/api/breeds/image/random
-    let res = await axios.get("https://dog.ceo/api/breeds/image/random");
-    console.log(res.data.message);
-    imageEl.src = res.data.message;
-  } catch (error) {
-    console.log(error);
-  }
-});
+// const btn = document.querySelector("#btn-axios");
+// btn.addEventListener("click", async () => {
+//   try {
+//     // gọi API -> https://dog.ceo/api/breeds/image/random
+//     let res = await axios.get("https://dog.ceo/api/breeds/image/random");
+//     console.log(res.data.message);
+//     imageEl.src = res.data.message;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 // api sử dùng ajax
-$("#btn-jquery").click(() => {
-  $.ajax({
-    type: "GET",
-    url: "https://dog.ceo/api/breeds/image/random",
-    success: function (response) {
-      console.log(response);
-      $("#image").attr("src", response.message);
-    },
-    error: function (err) {
-      console.log(err);
-    },
-  });
-});
+// $("#btn-jquery").click(() => {
+//   $.ajax({
+//     type: "GET",
+//     url: "https://dog.ceo/api/breeds/image/random",
+//     success: function (response) {
+//       console.log(response);
+//       $("#image").attr("src", response.message);
+//     },
+//     error: function (err) {
+//       console.log(err);
+//     },
+//   });
+// });
 
 // gọi api dùng fetch
 const btnFetch = document.querySelector("#btn-fetch");
