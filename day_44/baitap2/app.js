@@ -1,4 +1,4 @@
-let colors = [
+const colors = [
   '#3498db',
   '#9b59b6',
   '#e74c3c',
@@ -11,9 +11,10 @@ const App = function () {
   const [count, setCount] = React.useState(colorList.length);
 
   const removeBox = function (index) {
-    colorList.splice(index, 1);
-    setColorList(colorList);
-    setCount(colorList.length);
+    const newColorList = colorList;
+    newColorList.splice(index, 1);
+    setColorList(newColorList);
+    setCount(newColorList.length);
   }
 
   const moreBox = function () {
