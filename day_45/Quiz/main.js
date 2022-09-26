@@ -67,7 +67,7 @@ const App = function () {
           <React.Fragment>
             <div className="question-section">
               <div className="question-count">
-                <span>Question {i}</span>/{questions.length}
+                <span>Question {i + 1}</span>/{questions.length}
               </div>
 
               <div className="question-text">{questions[i].question}</div>

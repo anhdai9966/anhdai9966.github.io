@@ -44,11 +44,12 @@ const App = function () {
   return (
     <React.Fragment>
       <form onSubmit={submit}>
-        <input type="text" name="weight" placeholder="Enter weight (kg)" />
-        <p style={{color: 'red'}}>{validateWeight? `Weight ${validateWeight}` : ''}</p>
+        <input type="text" name="weight" placeholder="Enter weight (kg)" /> <br/>
+        {validateWeight && <p style={{color: 'red'}}>Weight {validateWeight}</p> }
 
-        <input type="text" name="height" placeholder="Enter height (m)" />
-        <p style={{color: 'red'}}>{validateHeight? `Height ${validateHeight}` : ''}</p>
+        <input type="text" name="height" placeholder="Enter height (m)" /> <br/>
+        {validateHeight && <p style={{color: 'red'}}>Height {validateHeight}</p> }
+        {/* <p style={{color: 'red'}}>{validateHeight? `Height ${validateHeight}` : ''}</p> */}
 
         <button>Calculate</button>
       </form>
