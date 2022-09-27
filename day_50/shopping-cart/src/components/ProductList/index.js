@@ -7,6 +7,7 @@ function ProductList() {
 
     return (
         <div className="col-md-8">
+       
             <div className="product-list">
             {state.length === 0 && <h1>Không có sản phẩm nào</h1>}
                 {state.length > 0 && state.map((product) => (
